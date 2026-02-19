@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <title>Insha AI</title>
+</head>
+<body>
+    <h1>Bandika insha yako hapa:</h1>
+    <form method="POST">
+        <textarea name="insha" rows="10" cols="80" placeholder="Andika insha yako hapa..."></textarea><br>
+        <button type="submit">Chambua Insha</button>
+    </form>
+
+    {% if feedback %}
+    <h2>Maoni ya AI:</h2>
+    <p>{{ feedback }}</p>
+    {% endif %}
+</body>
+</html>
