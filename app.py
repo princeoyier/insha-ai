@@ -4,15 +4,15 @@ import os
 
 app = Flask(__name__)
 
-AURORA_API_KEY = os.environ.get("AURORA_API_KEY")  # make sure you set this in Render
+AURORA_API_KEY = os.environ.get("AURORA_API_KEY")
 
 @app.route("/", methods=["GET", "POST"])
 def index():
     feedback = ""
     if request.method == "POST":
-        insha = request.form.get("insha")
+        insha = request.form.get("insha")  # GET insha from the web form
 
-        # Send the insha to Aurora Alpha
+        # Call Aurora Alpha API
         headers = {
             "Authorization": f"Bearer {AURORA_API_KEY}",
             "Content-Type": "application/json"
